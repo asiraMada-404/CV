@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria-Panagiota Adam - CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="cvContent" style="margin-bottom: 50px;"> <!-- Add bottom margin to prevent overlap -->
+    <header>
+        <h1>Maria-Panagiota Adam</h1>
+        <p class="subtitle">Geoinformatics Engineer MSc| GIS Developer</p>
+        <div class="contact-info" style="position: relative;">
+            <button id="contactButton" style="background: var(--mid); color: aliceblue; border: none; cursor: pointer; padding: 10px 20px; border-radius: 5px;">
+                Contact Me
+            </button>
+            <div id="contactInfo" style="display: none; position: absolute; top: 100%; left: 3.5%; background: var(--light); border: 2px solid var(--secondary); border-radius: 15px; padding: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); text-align: left; width: auto; white-space: nowrap; display: flex; gap: 10px;">
+                <!-- <div style="color:#333; display: flex; align-items: center;">
+                    📞 <span style="margin-left: 5px;">+XX XXX-XXX-XXXX</span>
+                </div>  -->
+                <div style="display: flex; align-items: center;">
+                    <img src="./file-type-outlook.svg" height="18px" width="18px" style="margin-right: 5px;">
+                    <a href="mailto:mariapanaad@outlook.com.gr">mariapanaad@outlook.com.gr</a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img src="./linkedin.svg" height="28px" width="28px" style="margin-right: 5px;">
+                    <a href="https://www.linkedin.com/in/maria-panagiota-adam/" target="_blank">maria-panagiota-adam</a>
+                </div>
+                <div style="display: flex; align-items: center;">
+                    <img src="./github.svg" height="28px" width="28px" style="margin-right: 5px;">
+                    <a href="https://github.com/asiraMada-404" target="_blank">asiraMada-404</a>
+                </div>
+                <div style="display: flex; align-items: center; color: #333;">
+                    📌<span style="margin-left: 5px;">Korydallos, Attiki, GR</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            const contactButton = document.getElementById('contactButton');
+            const contactInfo = document.getElementById('contactInfo');
+
+            // Ensure contact info is hidden on load
+            contactInfo.style.display = 'none';
+
+            contactButton.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                if (contactInfo.style.display === 'none' || contactInfo.style.display === '') {
+                    contactInfo.style.display = 'flex';
+                } else {
+                    contactInfo.style.display = 'none';
+                }
+            });
+
+            // Close the contact info when clicking outside
+            document.addEventListener('click', (event) => {
+                if (!contactButton.contains(event.target) && !contactInfo.contains(event.target)) {
+                    contactInfo.style.display = 'none';
+                }
+            });
+        </script>
+    </header>
+
+    <section id="summary">
+        <h2>SUMMARY</h2>
+        <p><!--Geoinformatics Engineer with a Master's degree in Geoinformatics and an Integrated Master's in Surveying Engineering & Geoinformatics. Proven expertise in processing geospatial data and database management, contributing to sustainable transport solutions. Adept in leveraging tools like QGIS and PostgreSQL to enhance operational efficiency, with a strong commitment to innovation and collaborative problem-solving.
+             -->
+            Geoinformatics Engineer (MSc) with experience in GIS, geospatial data processing, and database management(PostgreSQL/PostGIS). 
+            Skilled in Python, SQL, JavaScript, HTML, CSS, with beginner-level knowledge of ReactJS.
+            Currently attending an intensive Full-Stack Web Development Bootcamp, aiming to grow into a Full Stack GIS Developer and build innovative geospatial applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>SKILLS</h2>
+        <div class="skills-container">
+            <div class="skill-category" >
+                <ul>
+                    <li><span><h4 style="color:#2b6196;">Languages:</h4></span>
+                    <span>
+                        Python, SQL, Javascript, HTML, CSS, English, Greek 
+                    </span></li>
+
+                    <li><span><h4 style="color:#2b6196;">Frameworks:</h4></span>
+                    <span>
+                        PostgreSQL, PyCaret, Streamlit, Pandas, Scikit-learn, ReactJS (beginner)  
+                    </span></li>
+
+                    <li><span><h4 style="color:#2b6196;">Platforms:</h4></span>
+                    <span>
+                        VS Code, Jupiter Notebook, Google Colab, GitHub, Google Drive, Google Cloud Platform
+                    </span></li>
+
+                    <li><span><h4 style="color:#2b6196;">GIS:</h4></span>
+                    <span>
+                        ArcGIS, QGIS, Google Earth, Google My Maps, Geoserver, PostGIS
+                    </span></li>
+
+                    <li><span><h4 style="color:#2b6196;">Tools:</h4></span>
+                    <span>
+                        AutoCAD 2D, Google Maps, Google Forms, Google Sheets, Excel, PowerBI, PowerPoint
+                    </span></li>
+                    <li><span><h4 style="color:#2b6196;">Operating System, Architecture Style, Version Control:</h4></span>
+                    <span>
+                        Linux (basic commands), REST API, Git
+                    </span></li>
+
+                    <li><span><h4 style="color:#2b6196;">Soft Skills:</h4></span>
+                    <span>
+                        Adaptability, Eager desire to learn, Flexibility, Teamplayer
+                    </span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <div class="degree">
+            <h3>Master of Science in Geoinformatics</h3>
+            <div class="meta">
+                <span><strong>National Technical University of Athens</strong></span>
+                <span>📅 2022 - 2024</span>
+                <span>📍 Zografou, Attiki, GR</span>
+            </div>
+        </div>
+        <div class="degree">
+            <h3>Integrated Master of Science in Surveying Engineering and Geoinformatics</h3>
+            <div class="meta">
+                <span><strong>University of West Attica</strong></span>
+                <span>📅 2016 - 2022</span>
+                <span>📍 Egaleo, Attiki, GR</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>EXPERIENCE</h2>
+        <div class="job">
+            <h3>Geoinformatics Engineer</h3>
+            <div class="meta">
+                <span><strong>ScienTra Consulting Engineers</strong></span>
+                <span>📅 2022 - 2023</span>
+                <span>📍 Marousi, Attiki, GR</span>
+            </div>
+            <p style="font-size: smaller;">ScienTra, with its scientific background in various fields of Transport Science, aims to design sustainable and innovative transport solutions.</p>
+            <h4>Participated in the following transportation studies:</h4>
+            <span style="display: flex;"><ul>
+                <li>Sustainable Urban Mobility Plans</li>
+                <li>Fleet Management Study</li>
+                <li>Road Safety Control Study</li>
+            </ul></span><br>
+            <h4>Responsibilities:</h4>
+            <span><ul>
+                <li><strong style="color:#2b6196">Processing and rendering of geospatial data</strong> using tools such as <em>AutoCAD 2D</em>, <em>QGIS</em>, <em>ArcGIS</em>, <em>Google Earth</em>, and <em>Google My Maps</em>.</li>
+                <li><strong style="color:#2b6196">Creating and managing databases</strong> with <strong style="color:var(--primary)">PostgreSQL</strong>, resulting in a 25% decrease in response time.</li>
+                <li><strong style="color:#2b6196">Visualizing results with QGIS commands or Python (Colab)</strong>, and exporting them in shapefile or JSON file formats.</li>
+            <ul></span>
+        </div>
+    </section>
+        <section id="training">
+        <h2>TRAINING / COURSES </h2>
+        <div class="job">
+            <h3> The Complete Full-Stack Web Development Bootcamp</h3>
+            <div class="meta">
+                <span><strong>Udemy</strong></span>
+                <span>📅 Ongoing - (>80% completed)</span>
+                <span>📍 Online</span>
+            </div>
+        </div>
+        <div class="job">
+            <h3>Processing of Satellite Images with Python in Cloud Environment</h3>
+            <div class="meta">
+                <span><strong>Planetek Hellas Academy</strong></span>
+                <span>📅 17/06/2025 - 18/06/2025 (total duration: 16h)</span>
+                <span>📍 On-site</span>
+            </div>
+        </div>    
+    </section>
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="job">
+            <h3>My-React-Map-App |
+            <!-- <span class="project-demo" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/Family-Travel-Tracker" target="_blank"><strong><em>Demo-Link</em></strong></a> </span></h3> -->
+            <span class="project-repository" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/My-React-Map-App" target="_blank"><em>Repository</em></a></span></h3>
+            <div class="meta">
+                <span><strong>Personal Project</strong></span>
+                <span><strong>Programming & Technologies: ReactJS, JavaScript, CSS, Leaflet</strong></span>
+                <span>📅 Sep 2025</span>
+                <span>💻 Visual Studio Code</span>
+            </div>
+            <p><strong style="color:var(--primary);font-weight:bolder"> * A React-based interactive map application (CRA) that allows users to upload and preview any Geojson file. *</strong></p>
+            <div class="project-highlights">
+                <ul>
+                    <li><strong style="color:var(--mid)">Easy Preview for Geojson files:</strong> Easily load & display any Geojson file without the use of GIS platforms. </li>
+                    <li><strong style="color:var(--mid)">User-Friendly Interface:</strong> Simple and intuitive design for effortless navigation and data entry.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="job">
+            <h3>Family-Travel-Tracker |
+            <!-- <span class="project-demo" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/Family-Travel-Tracker" target="_blank"><strong><em>Demo-Link</em></strong></a> </span></h3> -->
+            <span class="project-repository" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/Family-Travel-Tracker" target="_blank"><em>Repository</em></a></span></h3>
+            <div class="meta">
+                <span><strong>Personal Project based on Udemy's Project</strong></span>
+                <span><strong>Programming: Node.js with Express, EJS (Embedded JavaScript), HTML, CSS, PostgreSQL</strong></span>
+                <span>📅 Sep 2025</span>
+                <span>💻 Visual Studio Code</span>
+            </div>
+            <!-- <p><strong style="color:var(--primary);font-weight:bolder"> * Pokemon Birthday Card *</strong></p> -->
+            <div class="project-highlights">
+                <ul>
+                    <li><strong style="color:var(--mid)">Interactive World Map:</strong>View a dynamic map highlighting the countries visited by each family member.</li>
+                    <li><strong style="color:var(--mid)">Family Member Profiles:</strong> Add multiple family members, each with a unique color to represent their travels.</li>
+                    <li><strong style="color:var(--mid)">Country Tracking:</strong> Easily mark countries as visited for each family member.</li>
+                    <li><strong style="color:var(--mid)">User-Friendly Interface:</strong> Simple and intuitive design for effortless navigation and data entry.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="job">
+            <h3>Alcohol Use Disorders: 1990-2019 Timelapse Map |
+            <span class="project-demo" style="font-size: smaller;">🔗<a href="https://asiramada-404.github.io/timelapse-map-alud/" target="_blank"><strong><em>Live Demo</em></strong></a> </span>
+            <span class="project-repository" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/timelapse-map-alud" target="_blank"><em>Repository</em></a></span></h3>
+            <div class="meta">
+                <span><strong>This project is part of an ongoing research program, building upon work initially conducted in a Master’s thesis in Geoinformatics at NTUA.</strong></span>
+                <span><strong>Programming: HTML, CSS, JavaScript</strong></span>
+                <span>📅 Apr 2025</span>
+                <span>💻 Visual Studio Code</span>
+            </div>
+            <!-- <p><strong style="color:var(--primary);font-weight:bolder"> * Pokemon Birthday Card *</strong></p> -->
+            <div class="project-highlights">
+                <ul>
+                    <li><strong style="color:var(--mid)">Interactive Timelapse:</strong>Play, pause, and scrub through time.</li>
+                    <li><strong style="color:var(--mid)">Dynamic Map Rendering:</strong> Built with MapLibre.js.</li>
+                    <li><strong style="color:var(--mid)">Responsive Design:</strong> Works on desktop.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="job">
+            <h3>Interactive PyCaret Regression App | <span class="project-repository" style="font-size: smaller;">🔗<a href="https://github.com/asiraMada-404/pycaret-regression-app" target="_blank"><em>Repository</em></a></span></h3>
+            <div class="meta">
+                <span><strong>Master's Thesis Project</strong></span>
+                <span><strong>Programming: Python</strong></span>
+                <span>📅 2024</span>
+                <span>💻 Visual Studio Code</span>  
+            </div>
+            <p style="color:var(--primary);font-weight:bolder">* An easy way to engage with machine learning. A beginner-friendly app that uses PyCaret and Streamlit for multiple linear regression and real-time predictions. *</p>
+            <div class="project-highlights">
+                <ul>
+                    <li><strong style="color:var(--mid)">Developed a Streamlit-based interactive machine learning application</strong> for data processing, exploratory data analysis, model training, and prediction.</li>
+                    <li><strong style="color:var(--mid)">Implemented a user-friendly UI</strong> with options for data upload, profiling, model selection, hyperparameter tuning, and predictions.</li>
+                    <li><strong style="color:var(--mid)">Utilized PyCaret for automated machine learning (AutoML)</strong>, including regression modeling, feature selection, and performance evaluation.</li>
+                    <li><strong style="color:var(--mid)">Enabled dataset preprocessing features</strong>, such as missing value handling, normalization, outlier removal, and multicollinearity detection.</li>
+                    <li><strong style="color:var(--mid)">Integrated interactive data profiling with Pandas Profiling</strong> for comprehensive Exploratory Data Analysis (EDA).</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    </div>
+    <footer>
+        <p>All rights reserved © 2025 asiraMada-404</p>
+    </footer>
+<!-- 
+    Download Button -->
+    <!-- <span style="display: flex; align-items: center; justify-content:flex-end;">
+        
+    <a href="./Maria-Panagiota Adam - CV.pdf" download="Maria-Panagiota_Adam_CV.pdf" class="download-btn" style="display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 10px 20px; border-radius: 5px;" target="_blank"> 
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Icon_pdf_file.svg" height="25px" width="25px" style="margin-right: 5px;"> Download CV
+    </a>
+    </span> -->
+</body>
+</html>

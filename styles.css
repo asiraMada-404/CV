@@ -1,0 +1,435 @@
+/* Base Styles */
+        :root {
+            --primary: #2c3e50;
+            --mid: #2b6196;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #333;
+            --gray: #95a5a6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 5px;
+            background-color: #f9f9f994;
+        }
+        a { color: var(--mid); text-decoration: none; }
+        a:hover { text-decoration: underline;transform:scale3d(1.05, 1.05, 1.05); }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            
+        }
+        h1 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 2.2em;
+        }
+        .subtitle {
+            color: var(--mid);
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.9em;
+        }
+        .contact-info span::before {
+            content: "•";
+            margin: 0 5px;
+            color: var(--gray);
+        }
+        .contact-info span:first-child::before {
+            content: none;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 10px;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 1px solid rgb(163, 161, 161);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+        h3 { color: var(--mid); margin-bottom: 5px; }
+        h4 { color: var(--dark); margin: 10px 0 5px; }
+        ul { padding-left: 20px; }
+        .smaller-font { font-size: smaller; }
+        li { margin-bottom: 5px; }
+        span{
+            display: inline-block;
+            background: var(--light);
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        /* Summary */
+        #summary {
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 5%;
+            text-align: justify;
+        }
+        #summary p {
+            margin: 0;
+            padding: 2%;
+            font-size: 1em;
+            line-height: 1.5;
+            color: var(--dark);
+            background-color: var(--light);
+            border-radius: 10px;
+        }
+
+        /* Experience & Education */
+        .job, .degree {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            color: var(--dark);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+        .meta span::before {
+            content: "•";
+            margin: 0 5px;
+        }
+        .meta span:first-child::before {
+            content: none;
+        }
+
+
+        /* Skills */
+        .skills-container {
+            background: var(--light);
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .skill-category {
+            flex: 1;
+            min-width: 150px;
+        }
+        .skill-category h4 {
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .project-highlights {
+            background: var(--light);
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .project-repository {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .project-repository a {
+            color: rgb(25, 25, 112);
+            display: flex;
+        }
+        .project-repository a:hover {
+            text-decoration: underline;
+            transform:scale3d(1.05, 1.05, 1.05);
+        }
+        .project-demo {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .project-demo a {
+            color: rgb(45, 45, 226);
+            font-weight: normal;
+            display: flex;
+        }
+        /* Download Button */
+        .download-btn {
+            background-color: var(--mid);
+            box-shadow: 0 0 0 2px var(--secondary); /* Add custom focus outline */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .download-btn:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+            box-shadow: 0 0px 10px var(--mid);
+        }
+
+        /* Contact Info */
+        .contact-info button {
+            background-color: var(--mid);
+            box-shadow: 0 0 0 2px var(--secondary); /* Add custom focus outline */
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .contact-info button:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+            box-shadow: 0 0px 10px var(--secondary);
+        }
+        footer {
+                float:none;
+                text-align: center;
+                margin-top: 0px; 
+                color: var(--gray); 
+                font-size: 0.7rem;
+        }
+
+        
+        /* Responsive */
+        @media (max-width: 300px) {
+            .contact-info { flex-direction: row; align-items: center; gap: 2%; }
+            .contact-info span::before { content: none; }
+            .skills-container { flex-direction: column; }
+        }
+        @media print {
+            /* General Print Settings */
+            body {
+                padding: 5%; /* Remove padding for print */
+                margin: 0;
+                background: none;
+                max-width: 100%;
+                width: 80%;
+                height: auto;
+                position: relative;
+                overflow: visible; /* Allow content to overflow for printing */
+                font-size: 11px; /* Adjust font size to fit content */
+                font-family: 'Arial', sans-serif; /* Use a standard font for printing */
+                color: var(--dark); /* Ensure text is readable in print */
+                font-display: swap; /* Ensure text is displayed correctly in print */
+                text-align: justify; /* Justify text for a cleaner look */
+                line-height: 1.5; /* Adjust line height for compactness */
+            }
+            section {
+                box-shadow: none;
+                page-break-inside: avoid; /* Prevent sections from splitting across pages */
+                margin: 0 auto; /* Remove extra margins */
+                padding: 0 auto; /* Remove extra padding */
+            }
+
+
+            header, footer {
+                page-break-after: avoid; /* Ensure header and footer stay on their respective pages */
+            }
+            #skills, #education {
+                page-break-before: avoid; /* Force these sections to start on a new page */
+            }
+            #experience{
+                page-break-before: avoid; /* Adjust as needed to fit content into 2 pages */
+                page-break-after: avoid; /* Adjust as needed to fit content into 2 pages */
+            }
+            #projects {
+                page-break-before: avoid; /* Adjust as needed to fit content into 2 pages */
+            }
+            #training, #strengths {
+                page-break-before: avoid; /* Adjust as needed to fit content into 2 pages */
+            }
+            .download-btn {
+                display: none; /* Hide the download button when printing */
+            }
+
+            /* A4 Page Size */
+            @page {
+                size: A4;
+                margin: auto; /* Adjust margins to fit content */
+
+            }
+
+            /* Compact Layout Adjustments */
+            h1, h2, h3, h4 {
+                margin: 0.1em 0; /* Reduce heading margins */
+            }
+            ul {
+                margin: 0;
+                padding-left: 15px;
+            }
+            li {
+                margin-bottom: 3px;
+            }
+            .meta {
+                font-size: 0.85em; /* Reduce font size for meta information */
+            }
+            section {
+                margin: 5%; /* Remove section margins */
+                padding: 0; /* Remove section padding */
+            }
+            .skills-container {
+                display: flex;
+                gap: 8px; /* Reduce gap between skill categories */
+                margin-top: 2%;
+            }
+            
+            .project-highlights{
+                font-size: smaller;
+            }
+            .project-highlights ul {
+                margin: 0;
+                padding-left: 15px;
+                display: inline-block;
+                /*font-size: smaller;*/
+            }
+            .project-repository, .project-demo {
+                margin: 0; /* Remove extra margins */
+                padding: 0; /* Remove extra padding */
+                font-size: 1.2em; /* Reduce font size for project links */
+            }
+            .project-repository a, .project-demo a {
+                font-size: 1em; /* Reduce font size for project links */
+                /*color: var(--mid);  Ensure links are readable in print */
+            }
+            .project-repository a:hover, .project-demo a:hover {
+                text-decoration: none; /* Remove underline on hover for print */
+            }
+            .download-btn {
+                display: none; /* Hide the download button when printing */
+            }
+            .contact-info{
+                display: block;
+            }
+            
+
+        }
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 10px; /* Adjust font size for compactness */
+                font-family: 'Arial', sans-serif; /* Use a standard font for printing */
+                line-height: 1.2; /* Reduce line height */
+                margin: 0mm auto; /* Standard A4 margin */
+                padding: 0; /* Remove extra padding */
+                max-width: 100%; /* Allow full width */
+            }
+            header{
+                margin: 0; /* Remove header/footer margins */
+                padding: 0; /* Remove header/footer padding */
+                margin-bottom: 1%;
+                padding-bottom: 1%;
+            }
+            section {
+                margin: 0px auto; /* Reduce section margins */
+                padding: 0px auto; /* Reduce section padding */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+
+            h1 {
+                font-size: 1.5em; /* Reduce main heading size */
+                margin: 0.2em 0; /* Reduce heading margins */
+            }
+            h2, h3, h4 {
+                font-size: 1em; /* Reduce subheading sizes */
+                margin: 0.1em 0; /* Reduce subheading margins */
+            }
+            ul, li {
+                display: block; /* Stack list items vertically */
+                margin: 0;
+                padding: 0;
+            }
+            .meta {
+                font-size: 0.85em; /* Reduce meta font size */
+                margin-bottom: 0px auto; /* Reduce spacing */
+            }
+            #summary {
+                display: block;
+                padding: 0; /* Remove extra padding */
+                margin-top: 10%; /* Remove extra margins */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+            #summary p {
+                margin-top: 1%; /* Remove extra margins */
+                margin-bottom: 1%; /* Remove extra margins */
+                padding: 0.7%; /* Remove extra padding */
+                text-align: justify; /* Justify text for a cleaner look */
+                background-color: var(--light); /* Ensure background color is consistent */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+            #skills, #education, #experience, #projects {
+                margin: 0.5%; /* Remove extra margins */
+                padding: 0; /* Remove extra padding */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+
+            .skills-container, .project-highlights {
+                display: flex; /* Stack content vertically */
+                margin-bottom: 0%; /* Remove extra margins */
+                padding: 0; /* Remove extra padding */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+            .contact-info {
+                font-size: 0.9em; /* Reduce contact info font size */
+                gap: 5px; /* Reduce spacing between items */
+            }
+            .skills-container {
+                gap: 5px; /* Reduce gap between skill categories */
+                border-radius: 10px; /* Keep rounded corners */
+            }
+            .project-highlights ul {
+                margin: 0;
+                padding-left: 0px; /* Reduce padding for lists */
+            }
+            .download-btn {
+                display: none; /* Hide the download button when printing */
+            }
+            
+
+        }
+        @media print {
+            footer {
+                float:none;
+                text-align: center;
+                margin-top: 0px; 
+                color: var(--gray); 
+                font-size: 0.5rem;
+            }
+            section {
+                    break-inside: avoid;
+                    page-break-inside: avoid;
+            }
+            #projects {
+                page-break-before: always;
+                break-before: page;
+            }
+            .download-btn {
+                display: none; /* Hide the download button when printing */
+            }
+            
+            @page {
+                size: A4; /* Ensure A4 page size */
+                margin: 10mm; /* Standard A4 margins */
+                margin-bottom: auto; /* Ensure bottom margin is auto */
+            }
+
+        }
